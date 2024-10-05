@@ -6,18 +6,20 @@ public class CaseThree {
 
         
         // while (true) {
-            System.out.println("Enter the jersey number of the player: ");
-            int jerseyNumber = scan.nextInt();
-            String playerPosition = identifyPlayer(jerseyNumber);
-            System.out.println(playerPosition);
-            System.out.println();
-            scan.close();
+        System.out.println("Enter the jersey number of the player: ");
+        int jerseyNumber = scan.nextInt();
+        String playerPosition = identifyPlayer(jerseyNumber);
+        System.out.println(playerPosition);
+        System.out.println();
+        scan.close();
         // }
     }
 
+    // Method to identify the player based on the jersey number
     protected static String identifyPlayer(int jerseyNumber) {
         String playerPosition = "";
 
+        // Code to handle even jersey numbers
         Boolean isTargetAttacker = jerseyNumber %2 == 0;
         Boolean isRightCaptain = false;
         if (isTargetAttacker) {
@@ -29,6 +31,7 @@ public class CaseThree {
             }
         }
 
+        // Code to handle odd jersey numbers
         Boolean isDefender = jerseyNumber %2 == 1;
         Boolean isPlayMaker = false;
         Boolean isKeeper = false;
